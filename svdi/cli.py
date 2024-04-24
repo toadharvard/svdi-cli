@@ -1,4 +1,4 @@
-from enum import StrEnum, auto
+from enum import Enum
 import os
 import typer
 from pathlib import Path
@@ -16,16 +16,16 @@ app = typer.Typer(
 )
 
 
-class Method(StrEnum):
-    numpy = auto()
-    pi = auto()
-    rSVD = auto()
-    pcafast = auto()
+class Method(str, Enum):
+    numpy = "numpy"
+    pi = "pi"
+    rSVD = "rSVD"
+    pcafast = "pcafast"
 
 
 @app.command(no_args_is_help=True)
 def compress(
-    method: Method = typer.Option(Method.numpy, help="Compression method"),
+    method: Method = typer.Option(Method.numpy, help="Compression method", case_sensitive=False),
     compression: float = typer.Option(2, min=1, help="Compression factor"),
     in_file: Path = typer.Option(..., help="Path to image file"),
     out_file: Path = typer.Option(..., help="Path to .svdi file to be created"),
