@@ -1,4 +1,4 @@
-# SVD image compression and decompression tool
+# Image compression and decompression using SVD
 
 ## Installation
 Install CLI using pipx:
