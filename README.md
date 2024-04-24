@@ -7,7 +7,7 @@ pipx install git+https://github.com/toadharvard/svdi-cli.git
 ```
 Or
 ```bash
-pipx install svdi-cli
+pipx install svdi
 ```
 
 ## Usage example
