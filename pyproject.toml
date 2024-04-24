@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "svdi"
-version = "1.0.0"
+version = "1.0.1"
 description = "Image compression and decompression tool using SVD"
 authors = ["Vadim Yakshigulov <toadharvard@gmail.com>"]
 license = "MIT"
